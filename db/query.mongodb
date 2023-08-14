@@ -1,0 +1,17 @@
+/* use("passport_example");
+db.usuarios.insertMany([
+    { id: 1, username: 'usuario1', token: 'miTokenSecreto', roles: ['usuario'] },
+    { id: 2, username: 'admin1', token: 'otroTokenSecreto', roles: ['admin', 'usuario'] }
+]);
+*/
+
+
+use("passport_example");
+db.usuarios.insertMany([
+    { id: 1, username: 'usuario1', token: 'miTokenSecreto', id_rol: 1},
+    { id: 2, username: 'admin1', token: 'otroTokenSecreto', id_rol: 2}
+]);
+db.roles.insertMany([ 
+    { id: 1,  roles: 'usuario'},
+    { id: 2,  roles: 'admin'}
+]);
